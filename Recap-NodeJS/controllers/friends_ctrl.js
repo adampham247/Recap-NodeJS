@@ -5,10 +5,10 @@ function getListofFriends(req,res) {
 }
 
 function getFriend(req,res){
-    const friendID = +req.params.friendId;
+    const friendID = +req.params.friendID;
     const friend = model[friendID];
     if (friend){
-        res.json(model);
+        res.json(friend);
     }
     else{
         res.status(404).json({
